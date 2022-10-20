@@ -1,0 +1,17 @@
+.button{
+    font-size: 30px;
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;  
+    justify-content: center;
+}
+.text-display{
+    display: flex;
+    justify-content: center;
+}
+.btn-section{
+    display: flex;
+    justify-content: center;
+}

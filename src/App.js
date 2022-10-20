@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from "react";
+import ReactDOM, { useState } from "react";
+import "../src/style.css";
+const App = () => {
+  const [number, setNumber] = useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div>
+      <h1 className="text-display">{number}</h1>
+      <div className="btn-section">
+        <button onClick={() => setNumber(number + 1)} className="button">
+          Add
+        </button>
+        <button
+          onClick={() => {
+            setNumber(number - 1);
+          }}
+          className="button"
         >
-          Learn React
-        </a>
-      </header>
+          less
+        </button>
+        <button
+          onClick={() => {
+            setNumber(0);
+          }}
+          className="button"
+        >
+          reset
+        </button>
+      </div>
     </div>
   );
-}
-
+};
 export default App;
